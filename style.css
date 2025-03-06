@@ -382,6 +382,20 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os projetos */
+  gap: 20px; /* Espaçamento entre os projetos */
+}
+
+.details-container {
+  width: 300px; /* Define um tamanho fixo para os projetos */
+  flex-grow: 1; /* Permite que os projetos se expandam uniformemente */
+  text-align: center;
+}
+
+
 /* CONTACT */
 
 #contact {
@@ -425,10 +439,56 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  background-color: #222; /* Cor de fundo escura */
+  color: #fff; /* Texto branco */
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 16px;
 }
 
-footer p {
-  text-align: center;
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #1db954; /* Cor verde ao passar o mouse */
+}
+
+.footer-socials {
+  margin-top: 10px;
+}
+
+.footer-socials img {
+  width: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-links {
+      flex-direction: column;
+      gap: 10px;
+  }
 }
