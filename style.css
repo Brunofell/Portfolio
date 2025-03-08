@@ -368,8 +368,8 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%; /* Ajusta a imagem para a largura disponível */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
 .project-title {
@@ -390,10 +390,26 @@ article .icon {
 }
 
 .details-container {
-  width: 300px; /* Define um tamanho fixo para os projetos */
+  flex-basis: 100%; /* Começa com 100% da largura */
+  max-width: 350px; /* Limita a largura máxima dos projetos */
+  min-width: 200px; /* Define um tamanho mínimo */
   flex-grow: 1; /* Permite que os projetos se expandam uniformemente */
   text-align: center;
+  overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
 }
+
+@media screen and (max-width: 1200px) {
+  .details-container {
+    flex-basis: 45%; /* Ajusta para 45% da largura da tela em resoluções médias */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .details-container {
+    flex-basis: 90%; /* Ajusta para 90% da largura da tela em resoluções menores */
+  }
+}
+
 
 
 /* CONTACT */
